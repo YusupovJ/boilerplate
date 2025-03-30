@@ -1,0 +1,40 @@
+{
+	"name": "project-name",
+	"version": "1.0.0",
+	"description": "Boilerplate for projects",
+	"scripts": {
+		"format": "prettier --write ./**/*.{ts,tsx,json}",
+		"format:api": "prettier --write api/src/**/*.{ts,json}",
+		"format:client": "prettier --write client/src/**/*.{ts,tsx,json}",
+		"lint": "eslint . --ext .ts,.tsx --fix",
+		"lint:api": "eslint api --ext .ts --fix",
+		"lint:client": "eslint client --ext .ts,.tsx --fix",
+		"prepare": "husky"
+	},
+	"author": "YusupovJ",
+	"license": "ISC",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "7.18.0",
+		"@typescript-eslint/parser": "7.18.0",
+		"eslint": "8.57.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-import": "2.31.0",
+		"eslint-plugin-prettier": "5.2.1",
+		"eslint-plugin-react-hooks": "4.6.2",
+		"eslint-plugin-react-refresh": "0.4.12",
+		"eslint-plugin-simple-import-sort": "12.1.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.5.0",
+		"prettier": "^3.5.3",
+		"typescript": "^5.8.2"
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.{json}": [
+			"prettier --write"
+		]
+	}
+}

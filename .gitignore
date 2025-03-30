@@ -1,0 +1,11 @@
+/**/dist
+/**/build
+
+/**/node_modules
+/**/yarn.lock
+/**/package-lock.json
+
+/**/.env
+
+api/uploads/**/*.*
+!api/uploads/.gitkeep
